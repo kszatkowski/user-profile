@@ -7,7 +7,6 @@
 	box-shadow: $item-shadow;
 	border-radius: 5px;
 	margin: 0 17px 10px 17px;
-	height: 183px;
 	padding: 20px;
 
 	i {
@@ -20,5 +19,9 @@
 	app-display-name {
 		display: block;
 		margin-bottom: 20px;
+
+		@media screen and (max-width: $mobile-devices) {
+			height: 60px;
+		}
 	}
 }
