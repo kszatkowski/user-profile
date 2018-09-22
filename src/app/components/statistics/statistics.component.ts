@@ -5,15 +5,14 @@ import { Component, OnInit, Input } from '@angular/core';
 	templateUrl: './statistics.component.html',
 	styleUrls: ['./statistics.component.scss']
 })
-export class StatisticsComponent implements OnInit {
+export class StatisticsComponent {
 
 	@Input() likes: number;
 	@Input() following: number;
 	@Input() followers: number;
 
-	constructor() { }
-
-	ngOnInit() {
+	follow(): void {
+		this.followers++;
 	}
 
 }

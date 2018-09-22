@@ -1,18 +1,17 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
 	selector: 'app-display-name',
 	templateUrl: './display-name.component.html',
 	styleUrls: ['./display-name.component.scss']
 })
-export class DisplayNameComponent implements OnInit {
+export class DisplayNameComponent {
 
 	@Input() fullName: string;
 	@Input() city: string;
+	@Output() likeClicked: any = new EventEmitter();
 
-	constructor() { }
-
-	ngOnInit() {
+	like(): void {
+		this.likeClicked.emit();
 	}
-
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IUserProfileData } from '../../services/user-profile.service';
 
 @Component({
@@ -6,13 +6,11 @@ import { IUserProfileData } from '../../services/user-profile.service';
 	templateUrl: './user-profile-header.component.html',
 	styleUrls: ['./user-profile-header.component.scss']
 })
-export class UserProfileHeaderComponent implements OnInit {
+export class UserProfileHeaderComponent {
 
 	@Input() userProfileData: IUserProfileData;
 
-	constructor() { }
-
-	ngOnInit() {
+	incrementLikeCount(): void {
+		this.userProfileData.likes++;
 	}
-
 }
