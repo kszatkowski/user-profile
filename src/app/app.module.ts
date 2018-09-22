@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UserProfileHeaderComponent } from './components/user-profile-header/user-profile-header.component';
@@ -16,7 +17,8 @@ import { StatistcsItemComponent } from './components/statistics/statistcs-item/s
 		StatistcsItemComponent
 	],
 	imports: [
-		BrowserModule
+		BrowserModule,
+		HttpClientModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
