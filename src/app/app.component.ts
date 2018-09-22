@@ -17,5 +17,4 @@ export class AppComponent implements OnInit {
 			.getJSON()
 			.subscribe((response: IUserProfileData) => this.userProfileData = response);
 	}
-	title = 'user-profile';
 }
