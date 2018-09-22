@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-display-name',
-  templateUrl: './display-name.component.html',
-  styleUrls: ['./display-name.component.scss']
+	selector: 'app-display-name',
+	templateUrl: './display-name.component.html',
+	styleUrls: ['./display-name.component.scss']
 })
 export class DisplayNameComponent implements OnInit {
 
-  constructor() { }
+	@Input() fullName: string;
+	@Input() city: string;
 
-  ngOnInit() {
-  }
+	constructor() { }
+
+	ngOnInit() {
+	}
 
 }

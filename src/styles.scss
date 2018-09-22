@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -60,6 +62,7 @@ h6 { font-size: 0.7em; }
 
 html {
 	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
 }
 
 body {

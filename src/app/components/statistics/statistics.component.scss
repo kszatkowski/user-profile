@@ -1,3 +1,5 @@
+@import '../../../styles/variables.scss';
+
 .statistics {
 	display: flex;
 
@@ -5,5 +7,19 @@
 		opacity: 0.1;
 		border: 1px solid #979797;
 		margin: 0 25px;
+	}
+
+	.btn-follow {
+		margin-left: 35px;
+		font-weight: bold;
+		background: $secondary-color;
+		border-radius: 100px;
+		font-size: 14px;
+		color: #FFFFFF;
+		letter-spacing: 4.2px;
+		border: 0;
+		text-transform: uppercase;
+		padding: 14px 20px;
+		cursor: pointer;
 	}
 }

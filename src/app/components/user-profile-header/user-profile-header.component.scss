@@ -8,4 +8,17 @@
 	border-radius: 5px;
 	margin: 0 17px 10px 17px;
 	height: 183px;
+	padding: 20px;
+
+	i {
+		display: block;
+		color: $secondary-color;
+		text-align: right;
+		cursor: pointer;
+	}
+
+	app-display-name {
+		display: block;
+		margin-bottom: 20px;
+	}
 }
