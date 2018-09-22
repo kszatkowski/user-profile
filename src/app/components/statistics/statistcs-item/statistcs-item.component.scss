@@ -1,0 +1,14 @@
+@import '../../../../styles/variables.scss';
+
+.quantity {
+	font-size: 24px;
+	color: $secondary-color;
+	letter-spacing: 0;
+}
+
+.description {
+	font-size: 10px;
+	color: #343E00;
+	letter-spacing: 0;
+	line-height: 29px;
+}
