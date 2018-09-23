@@ -6,6 +6,12 @@ export interface IComment {
 	date: Date;
 }
 
+export interface IProfile {
+	fullName: string;
+	city: string;
+	image: string
+}
+
 @Component({
 	selector: 'app-user-profile-comments',
 	templateUrl: './user-profile-comments.component.html',
@@ -13,6 +19,7 @@ export interface IComment {
 })
 export class UserProfileCommentsComponent {
 
+	@Input() profile: IProfile;
 	@Input() comments: Array<IComment>;
 	toggle: boolean = false;
 	submitted: boolean = false;
@@ -33,8 +40,8 @@ export class UserProfileCommentsComponent {
 			}
 
 			this.comments.push(comment);
-			this.submitted = false;
 			this.commentFormControl.setValue('');
+			this.submitted = false;
 		}
 	}
 }

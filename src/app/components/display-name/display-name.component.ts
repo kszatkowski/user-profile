@@ -10,9 +10,9 @@ export class DisplayNameComponent {
 
 	@Input() fullName: string;
 	@Input() city: string;
+	@Input() image: string;
 	@Input() imgWidth: number;
 	@Input() imgHeight: number;
-	@Input() imgSrc: string;
 	@Input() hideLikeButton: boolean;
 	@Output() likeClicked: any = new EventEmitter();
 
