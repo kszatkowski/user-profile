@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { StatistcsItemComponent } from './components/statistics/statistcs-item/s
 import { UserProfileCommentsComponent } from './components/user-profile-comments/user-profile-comments.component';
 import { CommentComponent } from './components/user-profile-comments/comment/comment.component';
 import { DayDifferencePipe } from './pipes/day-difference.pipe';
+import { ShareProfileDialogComponent } from './components/share-profile-dialog/share-profile-dialog.component';
 
 @NgModule({
 	declarations: [
@@ -23,17 +25,20 @@ import { DayDifferencePipe } from './pipes/day-difference.pipe';
 		StatistcsItemComponent,
 		UserProfileCommentsComponent,
 		CommentComponent,
-		DayDifferencePipe
+		DayDifferencePipe,
+		ShareProfileDialogComponent
 	],
 	imports: [
 		BrowserModule,
 		HttpClientModule,
 		BrowserAnimationsModule,
 		MatInputModule,
+		MatDialogModule,
 		FormsModule,
 		ReactiveFormsModule
 	],
 	providers: [],
-	bootstrap: [AppComponent]
+	bootstrap: [AppComponent],
+	entryComponents: [ShareProfileDialogComponent]
 })
 export class AppModule { }
