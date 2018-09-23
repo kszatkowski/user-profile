@@ -1,5 +1,5 @@
 <div class="user-profile-comments">
-	<a (click)="toggleComments()">Hide comments(353)</a>
+	<a (click)="toggleComments()">Hide comments ({{comments.length}})</a>
 	<div *ngFor="let comment of comments; let i = index;" [ngClass]="{'hide': toggle, 'show': !toggle }">
 		<app-comment [comment]="comment"></app-comment>
 	</div>
