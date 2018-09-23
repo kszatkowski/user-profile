@@ -1,26 +1,40 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 export interface IComment {
-    content: string;
-    date: Date;
+	content: string;
+	date: Date;
 }
 
 @Component({
-    selector: 'app-user-profile-comments',
-    templateUrl: './user-profile-comments.component.html',
-    styleUrls: ['./user-profile-comments.component.scss']
+	selector: 'app-user-profile-comments',
+	templateUrl: './user-profile-comments.component.html',
+	styleUrls: ['./user-profile-comments.component.scss']
 })
-export class UserProfileCommentsComponent implements OnInit {
+export class UserProfileCommentsComponent {
 
-    @Input() comments: Array<IComment>;
-    toggle: boolean = false;
+	@Input() comments: Array<IComment>;
+	toggle: boolean = false;
+	submitted: boolean = false;
+	commentFormControl: FormControl = new FormControl('', [
+		Validators.required
+	]);
 
-    constructor() { }
+	toggleComments(): void {
+		this.toggle = !this.toggle;
+	}
 
-    ngOnInit() {
-    }
+	keyDownFunction(event) {
+		this.submitted = true;
+		if (event.keyCode == 13 && this.commentFormControl.valid) {
+			let comment: IComment = {
+				content: this.commentFormControl.value,
+				date: new Date()
+			}
 
-    toggleComments(): void {
-        this.toggle = !this.toggle;
-    }
+			this.comments.push(comment);
+			this.submitted = false;
+			this.commentFormControl.setValue('');
+		}
+	}
 }
