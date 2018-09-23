@@ -1,5 +1,6 @@
 <div class="user-profile-header">
 	<i class="fas fa-share-square" (click)="shareProfile()"></i>
-	<app-display-name [imgWidth]="70" [imgHeight]="70" fullName="Alina Specter" city="New York, USA" (likeClicked)="incrementLikeCount()"></app-display-name>
+	<app-display-name [imgWidth]="70" [imgHeight]="70" fullName="Alina Specter" city="New York, USA" imgSrc="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg-1024x683.jpg"
+	 (likeClicked)="incrementLikeCount()"></app-display-name>
 	<app-statistics [likes]="userProfileData?.likes" [following]="userProfileData?.following" [followers]="userProfileData?.followers"></app-statistics>
 </div>

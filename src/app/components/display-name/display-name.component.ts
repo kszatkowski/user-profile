@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
 	selector: 'app-display-name',
@@ -12,6 +12,7 @@ export class DisplayNameComponent {
 	@Input() city: string;
 	@Input() imgWidth: number;
 	@Input() imgHeight: number;
+	@Input() imgSrc: string;
 	@Input() hideLikeButton: boolean;
 	@Output() likeClicked: any = new EventEmitter();
 
