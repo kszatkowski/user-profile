@@ -1,0 +1,25 @@
+@import '../../../styles/variables.scss';
+
+.user-profile-comments {
+	position: relative;
+	top: 36px;
+	background: #ffffff;
+	box-shadow: $item-shadow;
+	border-radius: 5px;
+	margin: 0 17px 10px 17px;
+	padding: 25px 0 25px 20px;
+
+	a {
+		cursor: pointer;
+		color: $secondary-color;
+		text-decoration: underline;
+	}
+
+	.hide {
+		display: none;
+	}
+	
+	.show {
+		display: block;
+	}
+}

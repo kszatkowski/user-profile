@@ -3,7 +3,13 @@
 	"following": 723,
 	"followers": 4433,
 	"comments": [
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum scelerisque eu lorem nec ullamcorper. Pellentesque lorem dui, vehicula dapibus tellus non, commodo fermentum mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum scelerisque eu lorem nec ullamcorper. Pellentesque lorem dui, vehicula dapibus tellus non, commodo fermentum mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		{
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum scelerisque eu lorem nec ullamcorper. Pellentesque lorem dui, vehicula dapibus tellus non, commodo fermentum mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+			"date": "2018-09-22T14:18:05.330Z"
+		},
+		{
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum scelerisque eu lorem nec ullamcorper. Pellentesque lorem dui, vehicula dapibus tellus non, commodo fermentum mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+			"date": "2018-08-14T13:22:05.330Z"
+		}
 	]
 }

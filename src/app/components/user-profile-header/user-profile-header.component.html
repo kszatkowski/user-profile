@@ -1,5 +1,5 @@
 <div class="user-profile-header">
 	<i class="fas fa-share-square"></i>
-	<app-display-name fullName="Alina Specter" city="New York, USA" (likeClicked)="incrementLikeCount()"></app-display-name>
+	<app-display-name [imgWidth]="70" [imgHeight]="70" fullName="Alina Specter" city="New York, USA" (likeClicked)="incrementLikeCount()"></app-display-name>
 	<app-statistics [likes]="userProfileData?.likes" [following]="userProfileData?.following" [followers]="userProfileData?.followers"></app-statistics>
 </div>
