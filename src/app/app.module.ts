@@ -9,6 +9,7 @@ import { StatisticsComponent } from './components/statistics/statistics.componen
 import { StatistcsItemComponent } from './components/statistics/statistcs-item/statistcs-item.component';
 import { UserProfileCommentsComponent } from './components/user-profile-comments/user-profile-comments.component';
 import { CommentComponent } from './components/user-profile-comments/comment/comment.component';
+import { DayDifferencePipe } from './pipes/day-difference.pipe';
 
 @NgModule({
 	declarations: [
@@ -18,7 +19,8 @@ import { CommentComponent } from './components/user-profile-comments/comment/com
 		StatisticsComponent,
 		StatistcsItemComponent,
 		UserProfileCommentsComponent,
-		CommentComponent
+		CommentComponent,
+		DayDifferencePipe
 	],
 	imports: [
 		BrowserModule,
