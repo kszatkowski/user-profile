@@ -5,8 +5,8 @@
 		<div class="separator"></div>
 	</div>
 
-	<form class="example-form">
-		<mat-form-field class="input-full-width">
+	<form class="comment-form">
+		<mat-form-field class="full-width">
 			<input matInput type="text" placeholder="Add a comment" (keydown)="keyDownFunction($event)" [formControl]="commentFormControl">
 		</mat-form-field>
 		<mat-error *ngIf="submitted && commentFormControl.hasError('required')">
