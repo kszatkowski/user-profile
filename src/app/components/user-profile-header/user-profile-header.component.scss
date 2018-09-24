@@ -10,10 +10,12 @@
 	padding: 20px;
 
 	i {
+		position: relative;
 		display: block;
 		color: $secondary-color;
 		text-align: right;
 		cursor: pointer;
+		z-index: 1;
 	}
 
 	app-display-name {

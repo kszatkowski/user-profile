@@ -67,5 +67,8 @@ html {
 }
 
 body {
+	position: relative;
+	height: 100%;
 	margin: 10px 5px 0 5px;
+	box-shadow: 0 0 4px 0 rgba(172,172,172,0.50);
 }

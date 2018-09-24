@@ -13,7 +13,6 @@
 		justify-content: space-between;
 
 		> span {
-			margin-right: 20px;
 			opacity: 0.5;
 			color: $primary-color;
 			letter-spacing: 0;
@@ -21,15 +20,11 @@
 	}
 
 	> p {
-		margin: 0 60px 0 58px;
+		margin: 0 40px 0 58px;
 
 		@media screen and (max-width: $mobile-devices) {
-			margin: 0 35px 0 58px;
+			margin: 0 15px 0 58px;
 		}
-	}
-
-	.separator {
-		border: 1px solid #EBEBEB;
 	}
 }
 
