@@ -1,16 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-
-export interface IComment {
-	content: string;
-	date: Date;
-}
-
-export interface IProfile {
-	fullName: string;
-	city: string;
-	image: string
-}
+import { IProfile } from '../../interfaces/IProfile';
+import { IComment } from '../../interfaces/IComment';
 
 @Component({
 	selector: 'app-user-profile-comments',

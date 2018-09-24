@@ -1,19 +1,14 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import { IComment, IProfile } from '../user-profile-comments.component';
+import { Component, Input } from '@angular/core';
+import { IProfile } from '../../../interfaces/IProfile';
+import { IComment } from '../../../interfaces/IComment';
 
 @Component({
 	selector: 'app-comment',
 	templateUrl: './comment.component.html',
 	styleUrls: ['./comment.component.scss']
 })
-export class CommentComponent implements OnInit {
+export class CommentComponent {
 
 	@Input() profile: IProfile;
 	@Input() comment: IComment;
-
-	constructor() { }
-
-	ngOnInit() {
-	}
-
 }

@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { IUserProfileData } from '../../services/user-profile.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+
 import { ShareProfileDialogComponent } from '../share-profile-dialog/share-profile-dialog.component';
+import { IUserProfileData } from '../../interfaces/IUserProfileData';
 
 @Component({
 	selector: 'app-user-profile-header',
