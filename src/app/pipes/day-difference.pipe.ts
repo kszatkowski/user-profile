@@ -8,6 +8,6 @@ export class DayDifferencePipe implements PipeTransform {
 		let timeDiff = Math.abs(now.getTime() - incomingDate.getTime());
 		let diffDays = timeDiff / (1000 * 3600 * 24);
 
-		return (diffDays < 1 && now.getDay() === incomingDate.getDay()) ? "Today" : `${Math.ceil(diffDays)}d`;
+		return (diffDays < 1 && now.getDay() === incomingDate.getDay()) ? 'Today' : `${Math.ceil(diffDays)}d`;
 	}
 }

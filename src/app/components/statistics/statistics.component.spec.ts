@@ -1,7 +1,7 @@
+import { Component, Input } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StatisticsComponent } from './statistics.component';
-import { Component, Input } from '@angular/core';
 
 @Component({
 	selector: 'app-statistcs-item',
@@ -31,5 +31,13 @@ describe('StatisticsComponent', () => {
 
 	it('should create', () => {
 		expect(component).toBeTruthy();
+	});
+
+	describe('follow', () => {
+		it('should increment followers value', () => {
+			component.followers = 5;
+			component.follow();
+			expect(component.followers).toBe(6);
+		});
 	});
 });

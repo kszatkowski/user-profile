@@ -14,5 +14,4 @@ export class StatisticsComponent {
 	follow(): void {
 		this.followers++;
 	}
-
 }

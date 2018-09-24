@@ -22,7 +22,7 @@ export class UserProfileCommentsComponent {
 		this.toggle = !this.toggle;
 	}
 
-	keyDownFunction(event) {
+	keyDownFunction(event): void {
 		this.submitted = true;
 		if (event.keyCode == 13 && this.commentFormControl.valid) {
 			let comment: IComment = {
