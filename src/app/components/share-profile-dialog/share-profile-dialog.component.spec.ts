@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShareProfileDialogComponent } from './share-profile-dialog.component';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 
 describe('ShareProfileDialogComponent', () => {
 	let component: ShareProfileDialogComponent;
@@ -8,7 +9,11 @@ describe('ShareProfileDialogComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [ShareProfileDialogComponent]
+			declarations: [ShareProfileDialogComponent],
+			imports: [MatDialogModule],
+			providers: [{
+				provide: MatDialogRef, useValue: {}
+			}]
 		})
 			.compileComponents();
 	}));

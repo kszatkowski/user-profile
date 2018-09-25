@@ -24,8 +24,7 @@ export class UserProfileHeaderComponent {
 		return dialogConfig;
 	}
 
-	constructor(private dialog: MatDialog) {
-	}
+	constructor(private dialog: MatDialog) { }
 
 	incrementLikeCount(): void {
 		this.userProfileData.likes++;
