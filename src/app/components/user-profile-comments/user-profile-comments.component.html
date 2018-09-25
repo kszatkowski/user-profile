@@ -1,0 +1,16 @@
+<div class="user-profile-comments">
+	<a (click)="toggleComments()">Hide comments ({{comments?.length}})</a>
+	<div *ngFor="let comment of comments; let i = index;" [ngClass]="{'hide': toggle, 'show': !toggle }">
+		<app-comment [profile]="profile" [comment]="comment"></app-comment>
+		<div class="separator"></div>
+	</div>
+
+	<form class="comment-form">
+		<mat-form-field class="full-width">
+			<input matInput type="text" placeholder="Add a comment" (keydown)="keyDownFunction($event)" [formControl]="commentFormControl">
+		</mat-form-field>
+		<mat-error *ngIf="submitted && commentFormControl.hasError('required')">
+			Comment cannot be empty.
+		</mat-error>
+	</form>
+</div>

@@ -1,0 +1,30 @@
+@import '../../../styles/variables.scss';
+
+.user-profile-comments {
+	position: relative;
+	top: 36px;
+	background: #ffffff;
+	box-shadow: $item-shadow;
+	border-radius: 5px;
+	margin: 0 17px 10px 17px;
+	padding: 25px 25px 25px 20px;
+
+	> a {
+		cursor: pointer;
+		color: $secondary-color;
+		text-decoration: underline;
+		
+		@media screen and (max-width: $mobile-devices) {
+			display: block;
+			text-align: center;
+		}
+	}
+
+	.comment-form {
+		margin-top: 20px;
+	}
+
+	.separator {
+		border-bottom: 1px solid #EBEBEB;
+	}
+}

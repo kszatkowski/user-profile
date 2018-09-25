@@ -1,0 +1,20 @@
+{
+	"profile": {
+		"fullName": "Alina Specter",
+		"city": "New York, USA",
+		"image": "https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg-1024x683.jpg"
+	},
+	"likes": 121,
+	"following": 723,
+	"followers": 4433,
+	"comments": [
+		{
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum scelerisque eu lorem nec ullamcorper. Pellentesque lorem dui, vehicula dapibus tellus non, commodo fermentum mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+			"date": "2018-09-22T14:18:05.330Z"
+		},
+		{
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum scelerisque eu lorem nec ullamcorper. Pellentesque lorem dui, vehicula dapibus tellus non, commodo fermentum mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+			"date": "2018-08-14T13:22:05.330Z"
+		}
+	]
+}

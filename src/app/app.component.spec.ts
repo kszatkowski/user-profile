@@ -1,27 +1,66 @@
-import { TestBed, async } from '@angular/core/testing';
+import { Component, Input } from '@angular/core';
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { from } from 'rxjs';
+
+import { IUserProfileData } from './interfaces/IUserProfileData';
 import { AppComponent } from './app.component';
+import { UserProfileService } from './services/user-profile.service';
+import { IProfile } from './interfaces/IProfile';
+import { IComment } from './interfaces/IComment';
+
+@Component({
+	selector: 'app-user-profile-header',
+	template: ''
+})
+class UserProfileHeaderComponentMock {
+	@Input() userProfileData: IUserProfileData;
+}
+@Component({
+	selector: 'app-user-profile-comments',
+	template: ''
+})
+class UserProfileCommentsComponentMock {
+	@Input() profile: IProfile;
+	@Input() comments: Array<IComment>;
+}
+
 describe('AppComponent', () => {
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  }));
-  it('should create the app', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
-  }));
-  it(`should have as title 'user-profile'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('user-profile');
-  }));
-  it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to user-profile!');
-  }));
+	let component: AppComponent;
+	let fixture: ComponentFixture<AppComponent>;
+
+	let userProfileService: UserProfileService
+
+	beforeEach(async(() => {
+		TestBed.configureTestingModule({
+			imports: [HttpClientTestingModule],
+			declarations: [
+				AppComponent,
+				UserProfileHeaderComponentMock,
+				UserProfileCommentsComponentMock
+			],
+			providers: [UserProfileService]
+		}).compileComponents();
+
+		userProfileService = TestBed.get(UserProfileService);
+		fixture = TestBed.createComponent(AppComponent);
+		component = fixture.componentInstance;
+	}));
+
+	beforeEach(() => {
+		spyOn(userProfileService, 'getJSON').and.callFake(() => {
+			return from([]);
+		});
+	});
+
+	it('should create the app', async(() => {
+		expect(component).toBeTruthy();
+	}));
+
+	describe('ngOnInit', () => {
+		it('should get data from UserProfileService', () => {
+			component.ngOnInit();
+			expect(userProfileService.getJSON).toHaveBeenCalled();
+		});
+	});
 });

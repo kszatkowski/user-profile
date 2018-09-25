@@ -1,0 +1,54 @@
+@import '../../../../styles/variables.scss';
+
+.comment {
+	margin: 25px 0px;
+
+	@media screen and (max-width: $mobile-devices) {
+		margin: 20px 0;
+	}
+
+	.row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		> span {
+			opacity: 0.5;
+			color: $primary-color;
+			letter-spacing: 0;
+		}
+	}
+
+	> p {
+		color: #444444;
+		margin: 0 40px 0 58px;
+
+		@media screen and (max-width: $mobile-devices) {
+			margin: 0 15px 0 58px;
+		}
+	}
+}
+
+:host ::ng-deep app-display-name {
+	.display-name {
+		@media screen and (max-width: $mobile-devices) {
+			flex-direction: row;
+			align-items: center;
+			bottom: 0;
+		}
+
+		#display-name-description {
+			@media screen and (max-width: $mobile-devices) {
+				display: flex;
+				margin: 0 0 0 10px;
+				height: 0;
+			}
+
+			.full-name {
+				@media screen and (max-width: $mobile-devices) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

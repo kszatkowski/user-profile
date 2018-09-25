@@ -1,0 +1,29 @@
+@import '../../../styles/variables.scss';
+
+.user-profile-header {
+	position: relative;
+	top: 36px;
+	background: #ffffff;
+	box-shadow: $item-shadow;
+	border-radius: 5px;
+	margin: 0 17px 10px 17px;
+	padding: 20px;
+
+	i {
+		position: relative;
+		display: block;
+		color: $secondary-color;
+		text-align: right;
+		cursor: pointer;
+		z-index: 1;
+	}
+
+	app-display-name {
+		display: block;
+		margin-bottom: 20px;
+
+		@media screen and (max-width: $mobile-devices) {
+			height: 60px;
+		}
+	}
+}

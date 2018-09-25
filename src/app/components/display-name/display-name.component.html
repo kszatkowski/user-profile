@@ -1,0 +1,13 @@
+<div class="display-name">
+	<img width="{{imgWidth}}" height="{{imgHeight}}" src="{{image}}" />
+	<div id="display-name-description" class="description">
+		<p class="full-name">{{fullName}}</p>
+		<div *ngIf="!hideLikeButton" class="like-icon-container-mobile">
+			<i class="far fa-heart" (click)="like()"></i>
+		</div>
+		<p class="city">{{city}}</p>
+	</div>
+	<div *ngIf="!hideLikeButton" class="like-icon-container">
+		<i class="far fa-heart" (click)="like()"></i>
+	</div>
+</div>
