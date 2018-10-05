@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { UserProfileService } from '@app/services/user-profile.service';
 import { IUserProfileData } from '@app/interfaces/IUserProfileData';
-import { IComment } from '@app/interfaces/IComment';
+import { compare } from '@app/shared/functions/compare';
 
 @Component({
 	selector: 'app-root',
@@ -19,16 +19,8 @@ export class AppComponent implements OnInit {
 		this._userProfileService
 			.getJSON()
 			.subscribe((response: IUserProfileData) => {
+				response.comments.sort((comment1, comment2) => compare<Date>(comment1.date, comment2.date));
 				this.userProfileData = response;
-				this.userProfileData.comments.sort(this.compareDate);
 			});
-	}
-
-	private compareDate(a: IComment, b: IComment) {
-		if (a.date < b.date)
-			return -1;
-		if (a.date > b.date)
-			return 1;
-		return 0;
 	}
 }
