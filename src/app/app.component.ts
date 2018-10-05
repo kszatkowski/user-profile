@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UserProfileService } from './services/user-profile.service';
-import { IUserProfileData } from './interfaces/IUserProfileData';
-import { IComment } from './interfaces/IComment';
+import { UserProfileService } from '@app/services/user-profile.service';
+import { IUserProfileData } from '@app/interfaces/IUserProfileData';
+import { IComment } from '@app/interfaces/IComment';
 
 @Component({
 	selector: 'app-root',
