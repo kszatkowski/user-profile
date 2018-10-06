@@ -24,6 +24,7 @@ class DisplayNameComponentMock {
 	@Input() imgWidth: number;
 	@Input() imgHeight: number;
 	@Input() hideLikeButton: boolean;
+	@Input() likeButtonClicked: boolean;
 }
 
 describe('UserProfileHeaderComponent', () => {
@@ -51,17 +52,47 @@ describe('UserProfileHeaderComponent', () => {
 		expect(component).toBeTruthy();
 	});
 
-	describe('incrementLikeCount', () => {
-		it('should increment likes value', () => {
+	describe('like', () => {
+		beforeEach(() => {
 			component.userProfileData = {
 				profile: { fullName: '', city: '', image: '' },
 				comments: [],
 				followers: 0,
 				following: 0,
-				likes: 0
+				likes: 10
 			}
-			component.incrementLikeCount();
-			expect(component.userProfileData.likes).toBe(1);
+		});
+		describe('when likeButtonClicked was set on false', () => {
+			beforeEach(() => {
+				component.likeButtonClicked = false;
+			});
+
+			it('should increment likes value', () => {
+				component.like();
+				expect(component.userProfileData.likes).toBe(11);
+			});
+
+			it('should set followButtonClicked value on true', () => {
+				component.like();
+				expect(component.likeButtonClicked).toBe(true);
+			});
+		});
+
+		describe('when likeButtonClicked was set on true', () => {
+			beforeEach(() => {
+				component.likeButtonClicked = true;
+			});
+
+			it('should decrement likes value', () => {
+				component.like();
+				expect(component.userProfileData.likes).toBe(9);
+			});
+
+			it('should set followButtonClicked value on false', () => {
+				component.likeButtonClicked = true;
+				component.like();
+				expect(component.likeButtonClicked).toBe(false);
+			});
 		});
 	});
 

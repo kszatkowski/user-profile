@@ -5,8 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 
 import { UserProfileCommentsComponent } from './user-profile-comments.component';
-import { IProfile } from '../../interfaces/IProfile';
-import { IComment } from '../../interfaces/IComment';
+import { IProfile } from '@app/interfaces/IProfile';
+import { IComment } from '@app/interfaces/IComment';
 
 @Component({
 	selector: 'app-comment',

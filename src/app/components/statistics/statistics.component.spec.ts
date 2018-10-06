@@ -34,10 +34,38 @@ describe('StatisticsComponent', () => {
 	});
 
 	describe('follow', () => {
-		it('should increment followers value', () => {
-			component.followers = 5;
-			component.follow();
-			expect(component.followers).toBe(6);
+		describe('when followButtonClicked was set on false', () => {
+			beforeEach(() => {
+				component.followers = 5;
+				component.followButtonClicked = false;
+			});
+
+			it('should increment followers value', () => {
+				component.follow();
+				expect(component.followers).toBe(6);
+			});
+
+			it('should set followButtonClicked value on true', () => {
+				component.follow();
+				expect(component.followButtonClicked).toBe(true);
+			});
+		});
+
+		describe('when followButtonClicked was set on true', () => {
+			beforeEach(() => {
+				component.followers = 5;
+				component.followButtonClicked = true;
+			});
+
+			it('should decrement followers value', () => {
+				component.follow();
+				expect(component.followers).toBe(4);
+			});
+
+			it('should set followButtonClicked value on false', () => {
+				component.follow();
+				expect(component.followButtonClicked).toBe(false);
+			});
 		});
 	});
 });
