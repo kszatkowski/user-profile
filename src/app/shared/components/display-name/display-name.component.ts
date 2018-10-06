@@ -14,9 +14,10 @@ export class DisplayNameComponent {
 	@Input() imgWidth: number;
 	@Input() imgHeight: number;
 	@Input() hideLikeButton: boolean;
-	@Output() likeClicked: any = new EventEmitter();
+	@Input() likeButtonClicked: boolean;
+	@Output() likeEmitter: EventEmitter<any> = new EventEmitter();
 
 	like(): void {
-		this.likeClicked.emit();
+		this.likeEmitter.emit();
 	}
 }

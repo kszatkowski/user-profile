@@ -12,6 +12,7 @@ import { IUserProfileData } from '@app/interfaces/IUserProfileData';
 export class UserProfileHeaderComponent {
 
 	@Input() userProfileData: IUserProfileData;
+	likeButtonClicked: boolean = false;
 
 	get dialogConfig(): MatDialogConfig {
 		const dialogConfig = new MatDialogConfig();
@@ -26,8 +27,9 @@ export class UserProfileHeaderComponent {
 
 	constructor(private dialog: MatDialog) { }
 
-	incrementLikeCount(): void {
-		this.userProfileData.likes++;
+	like(): void {
+		this.likeButtonClicked = !this.likeButtonClicked;
+		this.likeButtonClicked ? this.userProfileData.likes++ : this.userProfileData.likes--;
 	}
 
 	shareProfile(): void {

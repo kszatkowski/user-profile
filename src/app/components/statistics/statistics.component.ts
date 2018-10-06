@@ -10,8 +10,10 @@ export class StatisticsComponent {
 	@Input() likes: number;
 	@Input() following: number;
 	@Input() followers: number;
+	followButtonClicked: boolean = false;
 
 	follow(): void {
-		this.followers++;
+		this.followButtonClicked = !this.followButtonClicked;
+		this.followButtonClicked ? this.followers++ : this.followers--;
 	}
 }
