@@ -25,9 +25,9 @@ describe('DisplayNameComponent', () => {
 
 	describe('like', () => {
 		it('should emit event when button is clicked', () => {
-			spyOn(component.likeClicked, 'emit');
+			spyOn(component.likeEmitter, 'emit');
 			component.like();
-			expect(component.likeClicked.emit).toHaveBeenCalled();
+			expect(component.likeEmitter.emit).toHaveBeenCalled();
 		});
 	});
 });
