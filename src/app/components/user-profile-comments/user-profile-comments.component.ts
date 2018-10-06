@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { IProfile } from '../../interfaces/IProfile';
-import { IComment } from '../../interfaces/IComment';
+import { IProfile } from '@app/interfaces/IProfile';
+import { IComment } from '@app/interfaces/IComment';
 
 @Component({
 	selector: 'app-user-profile-comments',

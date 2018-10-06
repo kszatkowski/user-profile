@@ -7,20 +7,19 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { UserProfileHeaderComponent } from './components/user-profile-header/user-profile-header.component';
-import { DisplayNameComponent } from './components/display-name/display-name.component';
-import { StatisticsComponent } from './components/statistics/statistics.component';
-import { StatistcsItemComponent } from './components/statistics/statistcs-item/statistcs-item.component';
-import { UserProfileCommentsComponent } from './components/user-profile-comments/user-profile-comments.component';
-import { CommentComponent } from './components/user-profile-comments/comment/comment.component';
-import { DayDifferencePipe } from './pipes/day-difference.pipe';
-import { ShareProfileDialogComponent } from './components/share-profile-dialog/share-profile-dialog.component';
+import { UserProfileHeaderComponent } from '@app/components/user-profile-header/user-profile-header.component';
+import { StatisticsComponent } from '@app/components/statistics/statistics.component';
+import { StatistcsItemComponent } from '@app/components/statistics/statistcs-item/statistcs-item.component';
+import { UserProfileCommentsComponent } from '@app/components/user-profile-comments/user-profile-comments.component';
+import { CommentComponent } from '@app/components/user-profile-comments/comment/comment.component';
+import { DayDifferencePipe } from '@app/pipes/day-difference.pipe';
+import { ShareProfileDialogComponent } from '@app/components/share-profile-dialog/share-profile-dialog.component';
+import { SharedComponentsModule } from '@app/shared/components/shared-components.module';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		UserProfileHeaderComponent,
-		DisplayNameComponent,
 		StatisticsComponent,
 		StatistcsItemComponent,
 		UserProfileCommentsComponent,
@@ -35,7 +34,8 @@ import { ShareProfileDialogComponent } from './components/share-profile-dialog/s
 		MatInputModule,
 		MatDialogModule,
 		FormsModule,
-		ReactiveFormsModule
+		ReactiveFormsModule,
+		SharedComponentsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent],

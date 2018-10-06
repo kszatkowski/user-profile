@@ -1,4 +1,4 @@
-@import '../../../styles/variables.scss';
+@import '../../../../styles/variables.scss';
 
 .display-name {
 	display: flex;
@@ -55,6 +55,11 @@
 				color: #D9D9D9;
 				cursor: pointer;
 			}
+
+			.liked {
+				font-weight: 700;
+				color: #c0392b;
+			}
 		}
 
 		.city {
@@ -80,6 +85,11 @@
 			padding-bottom: 10px;
 			color: #D9D9D9;
 			cursor: pointer;
+		}
+
+		.liked {
+			font-weight: 700;
+			color: #c0392b;
 		}
 	}
 }

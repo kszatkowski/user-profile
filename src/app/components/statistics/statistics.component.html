@@ -4,5 +4,8 @@
 	<app-statistcs-item [quantity]="following" description="Following"></app-statistcs-item>
 	<span class="separator"></span>
 	<app-statistcs-item [quantity]="followers" description="Followers"></app-statistcs-item>
-	<button class="btn-follow" (click)="follow()">Follow</button>
+	<button class="btn-follow" (click)="follow()">
+		<span *ngIf="!followButtonClicked">Follow</span>
+		<span *ngIf="followButtonClicked">Following</span>
+	</button>
 </div>
