@@ -1,5 +1,5 @@
 <div class="display-name">
-	<img width="{{imgWidth}}" height="{{imgHeight}}" src="{{image}}" />
+	<img [width]="imgWidth" [height]="imgHeight" [src]="image" />
 	<div id="display-name-description" class="description">
 		<p class="full-name">{{fullName}}</p>
 		<div *ngIf="!hideLikeButton" class="like-icon-container-mobile">
